@@ -29,11 +29,18 @@ __email__ = "akuttor@gmail.com"
 __version__ = "0.1.0"
 
 
+def main():
+    arguments = docopt(__doc__, version='Search and Replace 1.0')
+    # upload_file(arguments)
+    # list_paths(arguments)
+    print arguments
+
+
 # list all key paths within environment
 def list_paths(args):
-    c = client('s3')
-    r = c.list_objects(Bucket=bucket, Prefix=env)
+    r = client('s3').list_objects(Bucket=bucket, Prefix=env)
     l = [Path(key['Key']).parent for k in r['Contents'] if filename in k['Key']]
+    
     return l
 
 
@@ -43,12 +50,6 @@ def upload_file(args):
     for i in list_paths(bucket, env, filename):
         r.Object(i, filename).upload_file(filename)
 
-# main
-def main():
-    arguments = docopt(__doc__, version='Search and Replace 1.0')
-    # upload_file(arguments)
-    # list_paths(arguments)
-    print arguments
 
 if __name__ == '__main__':
     main()
