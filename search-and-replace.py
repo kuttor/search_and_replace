@@ -26,7 +26,7 @@ from docopt import docopt
 __author__ = "Andrew Kuttor "
 __maintainer__ = "Andrew Kuttor"
 __email__ = "akuttor@gmail.com"
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 
 def main():
