@@ -8,7 +8,6 @@ Usage:
     search_and_replace.py (-h | --help)
     search_and_replace.py (-v | --version)
 
-
 Options:
     -d --dryrun              Executes a theoretical run
     -v -version                 Show version
