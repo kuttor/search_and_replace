@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """
 Search and Replace
 
@@ -21,6 +22,12 @@ from boto3 import client
 from boto3 import resource
 from pathlib import Path
 from docopt import docopt
+
+# about
+__author__ = "Andrew Kuttor "
+__maintainer__ = "Andrew Kuttor"
+__email__ = "akuttor@gmail.com"
+__version__ = "0.1.0"
 
 
 # list all key paths within environment
